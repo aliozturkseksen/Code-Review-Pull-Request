@@ -203,7 +203,7 @@ async fn handler(
                 log::debug!("Sending patch to OpenAI: {}", filename);
                 let co = ChatOptions {
                     model: MODEL,
-                    restart: false,
+                    restart: true,
                     system_prompt: Some(system),
                 };
                 let patch_as_text = f.patch.unwrap_or("".to_string());
